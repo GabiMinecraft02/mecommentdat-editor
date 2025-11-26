@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>MEComment.dat Editor</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<h1>Éditeur mecomment.dat</h1>
+
+<a href="/empty" class="button">📥 Télécharger un fichier mecomment.dat vide</a>
+
+<hr>
+
+<h3>Ouvrir un fichier</h3>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".dat">
+    <button type="submit">Ouvrir</button>
+</form>
+
+<form action="/download" method="POST">
+    <textarea name="editor" id="editor">{{ content }}</textarea>
+    <button type="submit">💾 Télécharger le fichier modifié</button>
+</form>
+
+<script src="/static/js/script.js"></script>
+</body>
+</html>
